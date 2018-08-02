@@ -6,7 +6,7 @@ function showTime(){
     var m = date.getMinutes(); 
     var s = date.getSeconds();
     var d = date.getDay();
-    var dayArray = ["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"];
+    var dayArray = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
     var day = dayArray[d];
 
     var session = "AM";
