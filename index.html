@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM System</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var remain = 0;
+        var updateBalance;
+        var date = new Date();
+        
+    
+    function withdraw(){
+
+        var trans = prompt("Please enter your amount");
+        trans = Number(trans);
+        remain = amount[i]-trans;
+        updateBalance = document.getElementById("balance");
+        updateBalance.innerHTML = "Your Account Balance : "+remain +"/-";
+        
+        alert("Transaction processed on : "+date.getDate() + "-"+date.getMonth()+"-"+date.getFullYear());
+        alert("Remaining Balance : "+remain +"/-");
+
+        return false;
+    }
+    function deposit(){
+        var deposit = prompt("Please enter your amount");
+        deposit = Number(deposit);
+        remain = remain + deposit;
+        alert("Amount Deposit : "+deposit +"/- on "+date.getDate() + "-"+date.getMonth()+"-"+date.getFullYear());
+        updateBalance = document.getElementById("balance");
+        updateBalance.innerHTML = "Your Account Balance : "+remain +"/-";
+
+        return false;
+
+    }
+
+
+    </script>
+    
+   
+</head>
+<body>
+
+    <div id="container">
+        <h1>ATM System</h1>
+        <div id="MyClockDisplay" class="clock"></div>
+        <br><br>
+        
+        <div id="labour">
+
+                <h3 id="user">Welcome</h3>
+                <p id="balance"></p>
+                <p id="trans"></p>
+
+                <div class="input-group">
+                        <button  class="btn" onclick="return withdraw();">Withdraw Money</button>
+                        <button  class="btn" onclick="return deposit();">Deposit Money</button>
+                    </div> 
+
+
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
